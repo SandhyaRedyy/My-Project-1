@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reservation</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/reservation.css">
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+    </div>
+  </header>
+  <section class="reservations">
+  <div class="reservation-form">
+    <h2>Hotel Booking For An Event</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="date" name="date" required>
+      <input type="time" name="time" required>
+      <input type="Number Of persons"name="persons"placeholder="Table Number From 1 to 120"required>
+      <input type="Event Name" name="Event Name"placeholder="Event Name"Required>
+      <button onclick="myfunction()">Submit</button>
+    </form>
+  </div>
+</section>
+<script>
+  function myfunction(){
+    alert("Thanks For Booking Our Restaurant");
+}
+  </script>
+</body>
+</html>
