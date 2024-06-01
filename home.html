@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Restaurant</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/home.css">
+  <link rel="icon" href="C:\Users\My LAP\Downloads\cooking.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="container">
+        <nav>
+            <div class="logo"><link rel="icon" href="C:\Users\My LAP\Downloads\cooking.png" />
+              <h1><img src="C:\Users\My LAP\Downloads\cooking.png"alt="">Rayalaseema Food Fest</h1>
+            </div>
+              <div class="icon">
+                <a href="file:///C:/Users/My%20LAP/Desktop/My-Project/Restaurant/signup.html">
+                <i onclick="sign()" class="fa-solid fa-user">Sign In</i></a>
+                <a href="file:///C:/Users/My%20LAP/Desktop/My-Project/Restaurant/login.html">
+                <i onclick="login()" class="fa-solid fa-user">Log In</i></a>
+            </div>
+            </div>
+        </nav>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome Restaurant</h1>
+    <p>Experience the Taste of Perfection</p>
+    <a href="#menu" class="btn">Explore Our Menu</a>
+  </div>
+</section>
+<script>
+  function myFun(){
+    let searchVal = document.getElementById("inp").value.toUpperCase() ;
+    let table = document.getElementsByTagName("table")
+    let tr = document.getElementsByTagName("tr");
+
+    let front = document.querySelector(".main")
+
+    for(let i=0; i<tr.length; i++){
+        let td = tr[i].getElementsByTagName("td")[0];
+        if(td){
+            let text = td.innerText;
+            if(text.toLocaleUpperCase().indexOf(searchVal) > -1){
+                tr[i].style.display="";
+                front.style.display="none"
+            }else{
+                tr[i].style.display="none"
+            }
+        }
+    }
+
+    if(searchVal == ""){
+        front.style.display="flex"
+    }
+    console.log(searchVal);
+}
+
+
+
+function nav(){
+    let nav = document.querySelector(".nav");
+    nav.style.display="block";
+    let sign = document.querySelector(".sign");
+    sign.style.display="none";
+}
+function sign(){
+    let sign = document.querySelector(".sign");
+    sign.style.display="block";
+
+    let nav = document.querySelector(".nav");
+    nav.style.display="none";
+
+}
+function myfunction(){
+    alert("Welcome To Our Website");
+}
+function myfunctions(){
+    alert("Your Account Is Created Successfully Now Please Login Into Your Account!");
+}
+</script>
+</body>
+</html>
